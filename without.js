@@ -21,9 +21,9 @@ const assertArraysEqual = function(array1, array2) {
 
 const without = function(source, itemsToRemove) {
   return source.filter(function(sourceItem) {
-    return !itemsToRemove.includes(sourceItem)
-  })
-}
+    return !itemsToRemove.includes(sourceItem);
+  });
+};
 
 // String Test
 const words = ["hello", "world", "lighthouse"];
