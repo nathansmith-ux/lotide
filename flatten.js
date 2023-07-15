@@ -13,7 +13,7 @@ const eqArrays = function(array1, array2) {
 
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ The arrays have been flattened!`);
+    console.log(`✅✅✅ The array has been flattened!`);
   } else {
     console.log(`⛔⛔⛔ The array was not flattened correctly, try again`);
   }
