@@ -7,9 +7,9 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKeyByValue = function(object, value) {
-  let keys = Object.keys(object);
-  for (let key of keys) {
-    if (object[key] === value) {
+  let keys = Object.keys(object); // Assigns all keys in the object to the keys variable
+  for (let key of keys) { // Loops through all the object keys
+    if (object[key] === value) { // Compares object's value with value passed through, if true it will return the key
       return key;
     }
   }
