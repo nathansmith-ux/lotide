@@ -40,7 +40,7 @@ console.log(results2);
 
 // Test Case For Numbers & Strings -> Telling me if the element is a string or number
 const numAndStr = ["hello", 1, 2, 3, "here"];
-const results3 = map(numAndStr, value => typeof value === 'string' ? "string": "number");
+const results3 = map(numAndStr, value => typeof value === 'string' ? "string" : "number");
 console.log(results3);
 
 // Assert Equal Tests
