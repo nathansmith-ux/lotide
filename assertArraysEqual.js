@@ -1,5 +1,6 @@
 const eqArrays = require('./eqArrays');
 
+// Function Implementation
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅ The provided arrays are a perfect match`);
