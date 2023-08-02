@@ -1,9 +1,9 @@
-const assertEqual = require('../assertEqual')
-const tail = require('../tail')
+const assertEqual = require('../assertEqual');
+const tail = require('../tail');
 
 // Test Case 1: Check the returned array elements with strings
-const result = tail(["Hello", "Lighthouse", "Labs"])
-assertEqual(result.length, 2); 
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result.length, 2);
 
 // Test Case 2: An array wih 1 element should yield an empty array
 const finish = tail([1]);
