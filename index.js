@@ -1,5 +1,5 @@
-const head   = require('./head');
-const tail   = require('./tail');
+const head = require('./head');
+const tail = require('./tail');
 const without = require('./without');
 const flatten = require('./flatten');
 const middle = require('./middle');
@@ -12,16 +12,16 @@ const takeUntil = require('./takeUntil');
 const findKey = require('./findKey');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  without: without,
-  flatten: flatten,
-  middle: middle,
-  countOnly: countOnly,
-  countLetters: countLetters,
-  letterPositions: letterPositions,
-  findKeyByValue: findKeyByValue,
-  map: map,
-  takeUntil: takeUntil,
-  findKey: findKey,
+  head,
+  tail,
+  without,
+  flatten,
+  middle,
+  countOnly,
+  countLetters,
+  letterPositions,
+  findKeyByValue,
+  map,
+  takeUntil,
+  findKey,
 };
