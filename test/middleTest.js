@@ -2,6 +2,7 @@ const middle = require('../middle');
 const assert = require('chai').assert;
 
 describe("#middle", () => {
+  // Empty Tests
   it("returns an empty array when provided with an array with 1 element", () => {
     assert.deepEqual(middle([1]), []);
   });
