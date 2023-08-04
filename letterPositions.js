@@ -35,6 +35,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 // Testing Start Of String
 assertArraysEqual(letterPositions("Lighthouse in the house").l, [0]);
 

@@ -31,6 +31,8 @@ const flatten = function(array) {
   return flattenedArray;
 };
 
+module.exports = flatten;
+
 // Test Case 1 Only Numbers
 const onlyNumbers = [1, 2, 3, 4, 5, 6];
 const beforeOnlyNumbers = [1, 2, [3, 4], 5, [6]];

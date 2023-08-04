@@ -23,6 +23,8 @@ const without = function(source, itemsToRemove) {
   return source.filter(sourceItem => !itemsToRemove.includes(sourceItem));
 };
 
+module.exports = without;
+
 // String Test
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"]));

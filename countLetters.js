@@ -20,6 +20,8 @@ const countLetters = function(sentence) {
   return numberOfLetters;
 };
 
+module.exports = countLetters;
+
 
 // Testing Using String "I Love Learning JavaScript"
 
