@@ -1,18 +1,20 @@
-const assertEqual = require('../assertEqual');
 const tail = require('../tail');
+const assert = require('chai').assert;
 
-// Test Case 1: Check the returned array elements with strings
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
+describe("#tail", () => {
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"])
+  });
 
-// Test Case 2: An array wih 1 element should yield an empty array
-const finish = tail([1]);
-assertEqual(finish.length, 0); // checks that we have an empty array
+  it("returns [2, 3, 4] when provided [1, 2, 3, 4]", () => {
+    assert.deepEqual(tail([1, 2, 3, 4]) [2, 3, 4])
+  })
 
-// Test Case 3: An empty array should yield an empty array
-const final = tail([]);
-assertEqual(final.length, 0); // checks that we have an empty array
+  it("returns an empty array when provided [1]", () => {
+    assert.deepEqual(tail([1]), [])
+  })
 
-// Test Case 4: Check the returned array elements with numbers
-const finale = tail([1, 2, 3, 4]);
-assertEqual(finale.length, 3);
+  it("returns an empty array when provided an empty array", () => {
+    assert.deepEqual(tail([]), [])
+  })
+});
