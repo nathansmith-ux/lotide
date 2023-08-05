@@ -1,10 +1,20 @@
-const assertEqual = require('../assertEqual');
 const eqArrays = require('../eqArrays');
+const assert = require('chai').assert;
 
-// True Test Cases
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
+describe("#eqArrays", () => {
+  it("returns true if two number arrays are equal", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+  });
 
-// False Test Cases
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
+  it("returns true if two string arrays are equal", () => {
+    assert.deepEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+  });
+
+  it("returns false if the arrays contain different data types", () => {
+    assert.deepEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+  });
+
+  it("returns false if the arrays contain the same data type but are in a different order", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+  });
+});
