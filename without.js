@@ -1,4 +1,4 @@
-// Function determines if two arrays are equal by first checking if they have the same number of elements. If they do then it will compare each element looking for any inequalities.
+// Function accepts two arrays and determines if they are equal
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -12,7 +12,7 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-// Function uses the eqArrays function to determine if two arrays are equal and logs either a success or failure message.
+// Function accepts two arrays and returns a message based on equality
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅ The source array was not altered`);
@@ -21,8 +21,9 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-// Function accepts two arrays (source and itemsToRemove). It will return a new array that contains items not found within the itemsToRemove array.
+// Function accepts two arrays (source and itemsToRemove)
 const without = function(source, itemsToRemove) {
+  // Return a new array that contains items not found within the itemsToRemove array.
   return source.filter(sourceItem => !itemsToRemove.includes(sourceItem));
 };
 
