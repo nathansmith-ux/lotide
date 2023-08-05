@@ -1,3 +1,4 @@
+// Function accepts two arrays and determines if they are equal
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -11,18 +12,24 @@ const eqArrays = function(array1, array2) {
   }
 };
 
+// Function accepts two objects
 const eqObjects = function(object1, object2) {
+  // Assigns variables to an array of the keys in objects 1 and 2
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
 
+  // If the number of keys are not equal in both objects return false
   if (keys1.length !== keys2.length) {
     return false;
   }
   
+  // Loop through all the keys in the keys1 array
   for (const key of keys1) {
+    // Assigns variables to all the key's values in objects 1 and 2
     const value1 = object1[key];
     const value2 = object2[key];
 
+    // If the values in both object 1 and 2 are arrays use the eqArrays function
     if (Array.isArray(value1) && Array.isArray(value2)) {
       if (eqArrays(value1, value2)) {
         continue;
@@ -30,6 +37,7 @@ const eqObjects = function(object1, object2) {
       return false;
     }
 
+    // If the values in both objects are not equal return false
     if (value1 !== value2) {
       return false;
     }
@@ -38,6 +46,7 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+// Compares if two objects are equal using the util library
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {

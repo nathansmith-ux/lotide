@@ -1,3 +1,4 @@
+// Function compares if two primitive data types are strictly equal
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,16 +7,21 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// Function accepts an object and a callback function
 const findKey = function(object, callback) {
+  // Looping through all keys in the object
   for (const key in object) {
+    // If the callback function matches the object's value returns the key
     if (callback(object[key])) {
       return key;
     }
   }
 };
 
+// Exporting Function
 module.exports = findKey;
 
+// Finding keys that match 2 stars
 const stars = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
@@ -25,6 +31,7 @@ const stars = findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2);
 
+// Finding keys that that have a review of 3
 const fastFood = findKey({
   "McDonalds": {review: 5},
   "Wendys": {review: 3},
@@ -33,6 +40,7 @@ const fastFood = findKey({
   "Smokes": {review: 2}
 }, x => x.review === 3);
 
+// Finding keys that match 6 sets
 const workOut = findKey({
   "barbell_row": {sets: 3},
   "bench_press": {sets: 4},

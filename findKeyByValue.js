@@ -1,3 +1,4 @@
+// Function compares if two primitive data types are strictly equal
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,17 +7,23 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// Function accepts an object and a key's value
 const findKeyByValue = function(object, value) {
-  let keys = Object.keys(object); // Assigns all keys in the object to the keys variable
-  for (let key of keys) { // Loops through all the object keys
-    if (object[key] === value) { // Compares object's value with value passed through, if true it will return the key
+  // Assigns all keys in the object to the keys variable
+  let keys = Object.keys(object); 
+  // Loops through all the object keys
+  for (let key of keys) { 
+    // Compares object's value with value passed through, if true it will return the key
+    if (object[key] === value) { 
       return key;
     }
   }
 };
 
+// Exporting Function
 module.exports = findKeyByValue;
 
+// Provided Object
 const bestTVShowsByGenre = {
   sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
@@ -28,7 +35,7 @@ const bestTVShowsByGenre = {
   romantic: "Notebook"
 };
 
-
+// Testing To See If Function Works As Expected
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Succession"), "suspence");

@@ -1,4 +1,4 @@
-
+// Function accepts two arrays and determines if they are equal
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -12,6 +12,7 @@ const eqArrays = function(array1, array2) {
   }
 };
 
+// Function accepts two arrays and returns a message based on equality
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅ The function is correct ${array1} === ${array2}`);
@@ -20,21 +21,28 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+// Function accepts a single array (sentence)
 const letterPositions = function(sentence) {
   const results = {};
-  let newSentence = sentence.split(" ").join("").toLowerCase(); // Makes the sentence a single lowercase string
+  
+  // Makes the sentence a single lowercase string
+  let newSentence = sentence.split(" ").join("").toLowerCase(); 
   for (let i = 0; i < newSentence.length; i++) {
     let letter = newSentence[i];
     if (!results[letter]) {
-      results[letter] = []; // Creates a new array when it first encounters each letter
-      results[letter].push(i); // Adds letter index value to newly created array found within the letter key
+      // Creates a new array when it first encounters each letter
+      results[letter] = []; 
+      // Adds letter index value to new array found within the letter key
+      results[letter].push(i); 
     } else {
-      results[letter].push(i); // When it encounters the same letter a second time it pushes the value to the already created array
+      // When it encounters the same letter a second time it pushes the value to the array value
+      results[letter].push(i); 
     }
   }
   return results;
 };
 
+// Exporting Function
 module.exports = letterPositions;
 
 // Testing Start Of String

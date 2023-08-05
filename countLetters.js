@@ -1,3 +1,4 @@
+// Function compares if two primitive data types are strictly equal
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,20 +7,25 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// Function accepts a string
 const countLetters = function(sentence) {
+  // Declaring a new object to record the letter count
   let numberOfLetters = {};
+  // Removing all spaces in the sentence and making the letters lowercase
   let newSentence = sentence.split(" ").join("").toLowerCase();
-  console.log(newSentence);
   for (const letter of newSentence) {
+    // If the letter exists as key value pair increase value by 1
     if (numberOfLetters[letter]) {
       numberOfLetters[letter] += 1;
     } else {
+      // If the letter doesn't exist as a key value pair make value 1
       numberOfLetters[letter] = 1;
     }
   }
   return numberOfLetters;
 };
 
+// Exporting Function
 module.exports = countLetters;
 
 
@@ -42,8 +48,6 @@ const inputString = {
   p: 1,
   t: 1
 };
-
-console.log(countLetters("I Love Learning JavaScript"));
 
 // Testing number of i's -> Function returns 3
 assertEqual(inputString.i, 3);

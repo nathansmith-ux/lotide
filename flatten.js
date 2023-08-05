@@ -1,3 +1,4 @@
+// Function accepts two arrays and determines if they are equal
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -11,6 +12,7 @@ const eqArrays = function(array1, array2) {
   }
 };
 
+// Function accepts two arrays and returns a message based on equality
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅ The array has been flattened!`);
@@ -19,34 +21,40 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+// Function takes an array that contains arrays as an element
 const flatten = function(array) {
   let flattenedArray = [];
+  
+  // Using a for loop to go through each array element 
   for (let i = 0; i < array.length; i++) {
+    // Checking if the array element is not an array. If it is not then we will push that element to our declared array above.
     if (!Array.isArray(array[i])) {
       flattenedArray.push(array[i]);
     } else {
+      // If the array element is an array then we will merge the two arrays to make them a single-level array
       flattenedArray = flattenedArray.concat(array[i]);
     }
   }
   return flattenedArray;
 };
 
+// Exporting Function
 module.exports = flatten;
 
-// Test Case 1 Only Numbers
+// Checking If The Function Works For Only Numbers
 const onlyNumbers = [1, 2, 3, 4, 5, 6];
 const beforeOnlyNumbers = [1, 2, [3, 4], 5, [6]];
 
-// Test Case 2 Only Strings
+// Checking If The Function Works For Only Strings
 const onlyStrings = ["LHL", "bootcamp", "is", "fun"];
 const beforeOnlyStrings = ["LHL", "bootcamp", ["is", "fun"]];
 
 
-// Test Case 3 Empty Array
+// Checking If The Function Works For An Empty Array
 const emptyArray = [1, 2, 3, 5];
 const beforeEmptyArray = [1, 2, 3, [], 5];
 
-// Test Case 4 Numbers and strings
+// Checking If The Function Works With Both Numbers and strings
 const stringAndNumbers = [1, 2, 3, 4, "LHL", "Lighthouse", 6, "Web"];
 const beforeStringAndNumbers = [1, 2, 3, 4, ["LHL", "Lighthouse"], 6, "Web"];
 

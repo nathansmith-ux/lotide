@@ -1,14 +1,18 @@
+// Function accepts an array and a callback Function
 const map = function(array, callback) {
   const results = [];
 
   for (let item of array) {
+    // Performs the callback function on each element of the array then pushes it into the results array
     results.push(callback(item));
   }
   return results;
 };
 
+// Exporting Function
 module.exports = map;
 
+// Function accepts two arrays and determines if they are equal
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -22,6 +26,7 @@ const eqArrays = function(array1, array2) {
   }
 };
 
+// Function accepts two arrays and returns a message based on equality
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅ The map function is working!`);
