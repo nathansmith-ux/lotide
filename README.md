@@ -15,7 +15,7 @@ This project was created and published as part of my learnings at [Lighthouse La
 
 **Require it:**
 
-`const _ = require('nathansmith-ux/lotide');`
+`const _ = require('@nathansmith-ux/lotide');`
 
 **Call it:**
 
