@@ -1,6 +1,6 @@
 {
   "name": "@nathansmith-ux/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A replica of the Lodash library built for learning purposes using mocha and chai for testing",
   "main": "index.js",
   "directories": {
