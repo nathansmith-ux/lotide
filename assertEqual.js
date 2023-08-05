@@ -1,7 +1,7 @@
 /**
  * Function will check if two primitive data types are equal
- * @param {primitive data type} actual 
- * @param {primitive data type} expected 
+ * @param {primitive data type} actual
+ * @param {primitive data type} expected
  * @returns success or fail message
  */
 const assertEqual = function(actual, expected) {

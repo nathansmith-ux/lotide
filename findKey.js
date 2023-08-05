@@ -1,7 +1,7 @@
 /**
  * Function returns the first key that matches the criteria of the callback function
- * @param {object} object 
- * @param {function} callback 
+ * @param {object} object
+ * @param {function} callback
  * @returns String (Object Key)
  */
 const findKey = function(object, callback) {

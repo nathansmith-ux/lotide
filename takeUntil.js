@@ -1,7 +1,7 @@
 /**
  * Function returns a new array with elements that don't meet the callback function's criteria
- * @param {array} array 
- * @param {function} callback 
+ * @param {array} array
+ * @param {function} callback
  * @returns A new array
  */
 const takeUntil = function(array, callback) {

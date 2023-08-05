@@ -1,6 +1,6 @@
 /**
  * Function takes a nested array and returns a single-level array
- * @param {array} array 
+ * @param {array} array
  * @returns A new array that is a single level
  */
 const flatten = function(array) {

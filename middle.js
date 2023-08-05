@@ -1,7 +1,7 @@
 // Function will take in a single array and return the middle elements.
 /**
  * Function returns the middle elements of an array
- * @param {array} array 
+ * @param {array} array
  * @returns Returns a new array containing the middle elements
  */
 const middle = function(array) {

@@ -1,7 +1,7 @@
 /**
  * Function determines if two arrays are equal
- * @param {array} array1 
- * @param {array} array2 
+ * @param {array} array1
+ * @param {array} array2
  * @returns Boolean
  */
 const eqArrays = function(array1, array2) {

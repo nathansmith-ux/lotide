@@ -3,8 +3,8 @@ const eqArrays = require('./eqArrays');
 
 /**
  * Functions determines if two arrays are equal
- * @param {array} array1 
- * @param {array} array2 
+ * @param {array} array1
+ * @param {array} array2
  * @returns a success or failure message
  */
 const assertArraysEqual = function(array1, array2) {

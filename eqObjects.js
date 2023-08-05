@@ -2,8 +2,8 @@ const eqArrays = require('./eqArrays');
 
 /**
  * Returns true if both objects have identical keys with identical values.
- * @param {object} object1 
- * @param {object} object2 
+ * @param {object} object1
+ * @param {object} object2
  * @returns boolean
  */
 const eqObjects = function(object1, object2) {

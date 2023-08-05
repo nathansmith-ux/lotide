@@ -1,6 +1,6 @@
 /**
  * Function accepts a string and returns a count of each letter
- * @param {string} sentence 
+ * @param {string} sentence
  * @returns Object with each key as a letter and the value as the number of times that letter appears in the sentence
  */
 const countLetters = function(sentence) {

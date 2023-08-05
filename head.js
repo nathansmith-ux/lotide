@@ -1,6 +1,6 @@
 /**
  * Function returns the first element of an array
- * @param {array} array 
+ * @param {array} array
  * @returns element
  */
 const head = function(array) {

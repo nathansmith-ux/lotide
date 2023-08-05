@@ -1,6 +1,6 @@
 /**
  * Function returns an array without the first element
- * @param {array} array 
+ * @param {array} array
  * @returns array
  */
 const tail = function(array) {
