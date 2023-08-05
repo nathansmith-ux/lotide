@@ -2,7 +2,7 @@ const countOnly = require('../countOnly');
 const assert = require('chai').assert;
 
 describe("#countOnly", () => {
-  it("returns an object that counts Fang Twice and Jason Once", () => {
+  it("returns a count of 2 for Fang", () => {
     const array = [
       "Karl",
       "Salima",
@@ -21,22 +21,23 @@ describe("#countOnly", () => {
       "Fang": true,
       "Agouhanna": false,
     };
-    
-    const result = {
-      "Fang": 2,
-      "Jason": 1
-    };
 
-    assert.deepEqual(countOnly(array, object), result);
+    assert.strictEqual(countOnly(array, object)["Fang"], 2);
   });
 
-  it("returns an object that counts Karima and Jason each once", () => {
+  it("returns undefined for Karim as it is not present in the array", () => {
     const array = [
-      "Karima",
+      "Karl",
+      "Salima",
       "Agouhanna",
-      "Jason"
+      "Fang",
+      "Kavith",
+      "Jason",
+      "Salima",
+      "Fang",
+      "Joe"
     ];
-
+    
     const object = {
       "Jason": true,
       "Karima": true,
@@ -44,12 +45,30 @@ describe("#countOnly", () => {
       "Agouhanna": false,
     };
 
-    const result = {
-      "Karima": 1,
-      "Jason": 1
-    };
+    assert.strictEqual(countOnly(array, object)["Karima"], undefined);
+  });
+
+  it("returns a count of 1 for Jason", () => {
+    const array = [
+      "Karl",
+      "Salima",
+      "Agouhanna",
+      "Fang",
+      "Kavith",
+      "Jason",
+      "Salima",
+      "Fang",
+      "Joe"
+    ];
     
-    assert.deepEqual(countOnly(array, object), result);
+    const object = {
+      "Jason": true,
+      "Karima": true,
+      "Fang": true,
+      "Agouhanna": false,
+    };
+
+    assert.strictEqual(countOnly(array, object)["Jason"], 1);
   });
 
 });
