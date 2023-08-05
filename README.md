@@ -11,7 +11,7 @@ This project was created and published as part of my learnings at [Lighthouse La
 
 **Install it:**
 
-`npm install nathansmith-ux/lotide`
+`npm install @nathansmith-ux/lotide`
 
 **Require it:**
 
