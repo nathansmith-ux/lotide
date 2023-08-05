@@ -1,3 +1,4 @@
+// Importing all the functions in the Lotide Library
 const head = require('./head');
 const tail = require('./tail');
 const without = require('./without');
@@ -11,6 +12,7 @@ const map = require('./map');
 const takeUntil = require('./takeUntil');
 const findKey = require('./findKey');
 
+// Exporting all the functions in the Lotide Library as an object
 module.exports = {
   head,
   tail,
