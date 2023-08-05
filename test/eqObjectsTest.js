@@ -5,13 +5,13 @@ describe("#eqObjects", () => {
   it("returns true for shirtObject and anotherShirtObject", () => {
     const shirtObject = { color: "red", size: "medium" };
     const anotherShirtObject = { size: "medium", color: "red" };
-    assert.isTrue(eqObjects(shirtObject, anotherShirtObject))
+    assert.isTrue(eqObjects(shirtObject, anotherShirtObject));
   });
 
   it("returns false for shirtObject and longSleeveShirtObject", () => {
     const shirtObject = { color: "red", size: "medium" };
     const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-    assert.isFalse(eqObjects(shirtObject, longSleeveShirtObject))
+    assert.isFalse(eqObjects(shirtObject, longSleeveShirtObject));
   });
 
   it("should return true for objects with the same keys and values but in different orders", () => {
@@ -23,6 +23,6 @@ describe("#eqObjects", () => {
   it("returns undefined for []", () => {
     const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
     const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-    assert.isFalse(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject))
+    assert.isFalse(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject));
   });
 });
