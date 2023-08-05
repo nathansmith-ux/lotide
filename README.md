@@ -27,27 +27,37 @@ The following functions are currently implemented:
 
 ### head Function
 ```javascript 
-_.head([])
+_.head([1, 2, 3, 4])
+// Returns [1]
 ```
 *
 ### tail Function
 ```javascript 
-_.tail([])
+_.tail([1, 2, 3, 4])
+// Returns [2, 3, 4]
 ```
 *
 ### without Function
 ```javascript 
-_.without([])
+_.without(["hello", "world", "lighthouse"], ["lighthouse"])
+// Returns ["hello", "world"]
 ```
 *
 ### flatten Function
 ```javascript 
-_.flatten([])
+_.flatten([1, 2, [3, 4], 5, [6]])
+// Returns [1, 2, 3, 4, 5, 6]
 ```
 *
 ### middle Function
 ```javascript 
-_.middle([])
+// Odd Numbered Arrays
+_.middle([1, 2, 3, 4, 5])
+// Returns [3]
+
+// Even Numbered Arrays
+_.middle([1, 2, 3, 4, 5, 6])
+// Returns [3, 4]
 ```
 *
 ### countOnly Function
