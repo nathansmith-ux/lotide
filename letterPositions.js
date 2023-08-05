@@ -21,7 +21,7 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-// Function accepts a single array (sentence)
+// Function accepts a string and returns the index values of each letter
 const letterPositions = function(sentence) {
   const results = {};
   

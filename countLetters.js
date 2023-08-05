@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Function accepts a string
+// Function accepts a string and returns a count of each letter
 const countLetters = function(sentence) {
   // Declaring a new object to record the letter count
   let numberOfLetters = {};

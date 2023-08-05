@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Function accepts an array (allItems) and object (itemsToCount)
+// Function accepts an array (allItems) and object (itemsToCount) and returns a count of the number of times the array element 
 const countOnly = function(allItems, itemsToCount) {
   // Declaring an empty object to record the count
   const results = {}

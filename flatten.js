@@ -21,7 +21,7 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-// Function takes an array that contains arrays as an element
+// Function takes a nested array and returns a single-level array
 const flatten = function(array) {
   let flattenedArray = [];
   for (let i = 0; i < array.length; i++) {

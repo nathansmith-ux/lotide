@@ -1,4 +1,4 @@
-// Function accepts an array and a callback Function
+// Function accepts an array and a callback function then returns a new array with the elements that meet the criteria of the callback function
 const map = function(array, callback) {
   const results = [];
 

@@ -1,4 +1,4 @@
-// Function accepts an array and a callback Function
+// Function accepts an array and a callback function then returns an array with elements that don't meet the callback function criteria.
 const takeUntil = function(array, callback) {
   const result = [];
   

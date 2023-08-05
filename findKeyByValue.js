@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Function accepts an object and a key's value
+// Function accepts an object and a key's value then returns the first key that matches the provided value
 const findKeyByValue = function(object, value) {
   // Assigns all keys in the object to the keys variable
   let keys = Object.keys(object); 
