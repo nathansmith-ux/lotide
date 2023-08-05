@@ -24,8 +24,6 @@ const assertArraysEqual = function(array1, array2) {
 // Function takes an array that contains arrays as an element
 const flatten = function(array) {
   let flattenedArray = [];
-  
-  // Using a for loop to go through each array element 
   for (let i = 0; i < array.length; i++) {
     // Checking if the array element is not an array. If it is not then we will push that element to our declared array above.
     if (!Array.isArray(array[i])) {
